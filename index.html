@@ -33,10 +33,9 @@
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body) -->
-  <link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body), self-hosted in /fonts -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/cabinet-grotesk-800.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/satoshi-400.woff2" crossorigin>
 
   <!-- Preload hero image for LCP -->
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=1000&q=70&auto=format&fit=crop" fetchpriority="high">
