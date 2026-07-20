@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══════════════════════════════════════════════════════════════
+       BEFORE LAUNCH — replace these placeholders:
+       1. Domain: swap every "https://www.lightworkexteriors.com" for the real domain
+          (also in sitemap.xml and robots.txt)
+       2. Phone:  (319) 555-0148  →  real number (4 places on page + JSON-LD)
+       3. Email:  quotes@lightworkexteriors.com  →  real email (2 places + JSON-LD + form action)
+       4. Form:   see the <form> tag comment in the #quote section
+       ══════════════════════════════════════════════════════════════ -->
+
+  <title>Landscaping & Lawn Care in Cedar Rapids, IA | Light Work</title>
+  <meta name="description" content="Light Work Exterior Services offers lawn mowing, landscaping, mulch, and seasonal cleanups in Cedar Rapids, Iowa. Locally owned and insured. Get a free quote today.">
+  <link rel="canonical" href="https://www.lightworkexteriors.com/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Light Work Exterior Services">
+  <meta property="og:title" content="Landscaping & Lawn Care in Cedar Rapids, IA | Light Work">
+  <meta property="og:description" content="Lawn mowing, landscaping, mulch, and seasonal cleanups in Cedar Rapids, Iowa. Locally owned and insured. Free quotes within one business day.">
+  <meta property="og:url" content="https://www.lightworkexteriors.com/">
+  <meta property="og:image" content="https://www.lightworkexteriors.com/assets/light-work-logo.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="geo.region" content="US-IA">
+  <meta name="geo.placename" content="Cedar Rapids">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body) -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=1000&q=70&auto=format&fit=crop" fetchpriority="high">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.lightworkexteriors.com/#business",
+    "name": "Light Work Exterior Services",
+    "description": "Locally owned lawn care and landscaping company serving Cedar Rapids, Iowa. Lawn mowing, landscape design and installation, mulch and garden beds, hedge trimming, seasonal cleanups, and pressure washing.",
+    "url": "https://www.lightworkexteriors.com/",
+    "telephone": "+1-319-555-0148",
+    "email": "quotes@lightworkexteriors.com",
+    "image": "https://www.lightworkexteriors.com/assets/light-work-logo.jpg",
+    "logo": "https://www.lightworkexteriors.com/assets/light-work-logo.jpg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cedar Rapids",
+      "addressRegion": "IA",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 41.9779, "longitude": -91.6656 },
+    "areaServed": {
+      "@type": "City",
+      "name": "Cedar Rapids",
+      "sameAs": "https://en.wikipedia.org/wiki/Cedar_Rapids,_Iowa"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Landscaping Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lawn Mowing & Maintenance" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landscape Design & Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mulch & Garden Beds" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hedge & Shrub Trimming" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spring & Fall Cleanup" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure Washing" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ structured data (mirrors the visible FAQ section below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does lawn care cost in Cedar Rapids?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every yard is different, so we quote each property individually — most quotes go out within one business day. Pricing depends on lot size, terrain, and how often you'd like service. Quotes are always free and there's no obligation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We currently serve homes and small businesses inside Cedar Rapids, Iowa city limits — from Czech Village and NewBo to Bowman Woods and Noelridge. We're not yet serving Marion or Hiawatha, but that's coming as we grow." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to sign a contract?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. You can book one-time work like a cleanup or mulch install, or set up recurring mowing that you can pause or cancel anytime. We'd rather earn your repeat business than lock it in." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — Light Work Exterior Services is fully insured, and the owner is on-site for every job. If we ever damage something, we make it right." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get a quote?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fill out the quote form on this page, or call us directly. Tell us your address and what you need done — we'll usually respond within one business day, and we can do a free walkthrough for bigger landscaping projects." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Light Work Exterior Services — home">
+        <svg class="brand-mark" width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="15" cy="12" r="6" fill="var(--color-accent)"/>
+          <path d="M8 30 L24 15 L40 30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 37 Q24 30.5 41 37" stroke="var(--color-green-bright)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Light Work<small>Exterior Services</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#area">Service Area</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="header-phone" href="tel:+13195550148">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(319) 555-0148</span>
+      </a>
+
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch color theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════ Hero ═══════════ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Locally owned · Cedar Rapids, Iowa</p>
+          <h1>Lawn care &amp; landscaping in Cedar Rapids — consider it <em>light work</em>.</h1>
+          <p class="hero-sub">Mowing, mulch, cleanups, and landscaping for homes across Cedar Rapids. Owner-operated, fully insured, and easy to book — get a free quote within one business day.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+            <a class="btn btn-ghost" href="tel:+13195550148">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (319) 555-0148
+            </a>
+          </div>
+          <ul class="hero-points" role="list">
+            <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Free quotes, no obligation</li>
+            <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fully insured</li>
+            <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No contracts required</li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <img class="hero-photo"
+               src="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=1000&q=70&auto=format&fit=crop"
+               width="1000" height="1150"
+               alt="Landscaper trimming grass along a brick walkway in front of a home"
+               fetchpriority="high" decoding="async">
+          <div class="hero-logo-card">
+            <img src="assets/light-work-logo.jpg" width="400" height="400"
+                 alt="Light Work Exterior Services logo" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ Trust strip ═══════════ -->
+    <section class="trust" aria-label="Highlights">
+      <div class="container trust-inner">
+        <p class="trust-item"><strong>100%</strong> free quotes</p>
+        <p class="trust-item"><strong>1 day</strong> quote turnaround</p>
+        <p class="trust-item"><strong>Owner</strong> on every job</p>
+        <p class="trust-item"><strong>Cedar Rapids</strong> born &amp; based</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ Services ═══════════ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2>Landscaping services in Cedar Rapids</h2>
+          <p>From weekly mowing to a full landscape refresh — one local crew, one point of contact, and a yard you don't have to think about.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card service-card--featured reveal">
+            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=900&q=70&auto=format&fit=crop"
+                 width="900" height="506"
+                 alt="Close-up of a thick, healthy green lawn" loading="lazy" decoding="async">
+            <div class="service-body">
+              <span class="service-tagline">Most popular</span>
+              <h3>Lawn Mowing &amp; Maintenance</h3>
+              <p>Weekly or bi-weekly mowing with edging, trimming, and blow-off included every visit. Consistent schedule, clean lines, and no contract holding you hostage.</p>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"/><path d="M9 8a3 3 0 0 1 6 0c0 2-3 4-3 4s-3-2-3-4z"/><path d="M5 22a7 7 0 0 1 7-7 7 7 0 0 1 7 7z"/></svg>
+            <h3>Landscape Design &amp; Installation</h3>
+            <p>New plantings, shrubs, edging, and rock or stone accents that fit your home and Iowa's seasons.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22h20"/><path d="M4 22c0-4 2-7 8-7s8 3 8 7"/><path d="M12 15V9"/><path d="M12 9c-2.5 0-4-1.8-4-4.5C10.5 4.5 12 6 12 9zm0 0c2.5 0 4-1.8 4-4.5C13.5 4.5 12 6 12 9z"/></svg>
+            <h3>Mulch &amp; Garden Beds</h3>
+            <p>Bed cleanout, fresh mulch, and crisp edges — the fastest way to make a whole yard look cared for.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V9a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v0"/><path d="M18 21V13"/><circle cx="18" cy="9" r="4"/><circle cx="6" cy="6" r="3"/></svg>
+            <h3>Hedge &amp; Shrub Trimming</h3>
+            <p>Shaping, thinning, and haul-away for overgrown hedges, bushes, and small trees.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6"/><path d="m15 5-3 3-3-3"/><path d="M4 13c2.5-1.5 5-1.5 8 0s5.5 1.5 8 0"/><path d="M4 18c2.5-1.5 5-1.5 8 0s5.5 1.5 8 0"/></svg>
+            <h3>Spring &amp; Fall Cleanup</h3>
+            <p>Leaf removal, debris haul-off, and bed prep so your yard starts and ends the season right.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7"/><path d="M10 6.5 21 17.5"/><path d="M14 21l7-7"/><path d="M5 14c1.5 1.5 1.5 3.5 0 5M8 17c1 1 1 2 0 3"/></svg>
+            <h3>Pressure Washing</h3>
+            <p>Driveways, siding, patios, and decks — it's in our name. Exterior services, done properly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ Why us ═══════════ -->
+    <section class="why section" id="why">
+      <div class="container why-inner">
+        <img class="why-photo reveal"
+             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop"
+             width="900" height="765"
+             alt="Well-kept home exterior with a freshly mowed lawn at dusk" loading="lazy" decoding="async">
+        <div>
+          <p class="eyebrow">Why Light Work</p>
+          <h2 class="section-head" style="margin-bottom:0">The new crew in town, with something to prove</h2>
+          <ul class="why-list" role="list">
+            <li>
+              <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <div><strong>The owner shows up — every time</strong>
+              <p>No rotating crews or subcontractors. The person who quotes your yard is the person who cuts it.</p></div>
+            </li>
+            <li>
+              <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <div><strong>Honest, itemized quotes</strong>
+              <p>You'll see exactly what you're paying for. No surprise fees, no upsells you didn't ask for.</p></div>
+            </li>
+            <li>
+              <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <div><strong>Fully insured &amp; accountable</strong>
+              <p>Proper insurance from day one. If something goes wrong on your property, we make it right.</p></div>
+            </li>
+            <li>
+              <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <div><strong>First-season openings available</strong>
+              <p>We're a new business building our route — which means real availability and extra care on every job.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ Service area ═══════════ -->
+    <section class="section" id="area">
+      <div class="container area-inner">
+        <div>
+          <p class="eyebrow">Where we work</p>
+          <h2 class="section-head" style="margin-bottom:0">Proudly serving Cedar Rapids, Iowa</h2>
+          <p style="margin-top:var(--space-4); color:var(--color-text-muted)">We keep our route tight so we can show up on time, every time. If your home or business is inside Cedar Rapids city limits, you're in our service area.</p>
+          <p class="area-note"><strong>Not in Cedar Rapids?</strong> We're not booking Marion or Hiawatha yet — but we're growing. Send a quote request anyway and we'll let you know the moment we reach your street.</p>
+        </div>
+        <div>
+          <h3 class="sr-only">Cedar Rapids neighborhoods we serve</h3>
+          <ul class="hoods" role="list">
+            <li>Czech Village</li>
+            <li>NewBo</li>
+            <li>Kenwood</li>
+            <li>Bever Park</li>
+            <li>Noelridge</li>
+            <li>Cherry Hill</li>
+            <li>Bowman Woods</li>
+            <li>Oakhill Jackson</li>
+            <li>Wellington Heights</li>
+            <li>Mound View</li>
+            <li>Kingston Village</li>
+            <li>Ellis Park area</li>
+            <li>Downtown Cedar Rapids</li>
+            <li>Northwest Cedar Rapids</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ Quote form ═══════════ -->
+    <section class="quote section" id="quote">
+      <div class="container quote-inner">
+        <div>
+          <p class="eyebrow">Free quote</p>
+          <h2 class="section-head" style="margin-bottom:0">Get your free quote</h2>
+          <p style="margin-top:var(--space-4); color:var(--color-text-muted)">Tell us about your yard and what you need done. We'll get back to you within one business day — usually faster.</p>
+          <div class="quote-contacts">
+            <a href="tel:+13195550148">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>(319) 555-0148<small>Call or text, Mon–Sat 7am–6pm</small></span>
+            </a>
+            <a href="mailto:quotes@lightworkexteriors.com">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <span>quotes@lightworkexteriors.com<small>Photos of your yard help us quote faster</small></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- To make this form live: sign up the business email at https://formspree.io (or
+             https://formsubmit.co), put the endpoint they give you in `action`, then delete
+             the data-demo attribute. Until then, submissions show a success message locally
+             but are NOT sent anywhere. -->
+        <form class="quote-form" id="quote-form" data-demo="true"
+              action="https://formsubmit.co/quotes@lightworkexteriors.com" method="POST" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="q-name">Name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required>
+              <p class="field-error">Please enter your name.</p>
+            </div>
+            <div class="form-field">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" autocomplete="tel" required>
+              <p class="field-error">Please enter a phone number.</p>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="q-email">Email <span>(optional)</span></label>
+              <input id="q-email" name="email" type="email" autocomplete="email">
+              <p class="field-error">That email doesn't look right.</p>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="q-address">Street address in Cedar Rapids</label>
+              <input id="q-address" name="address" type="text" autocomplete="street-address" placeholder="e.g. 1234 3rd Ave SE" required>
+              <p class="field-error">Please enter your address so we can quote accurately.</p>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="q-service">What do you need?</label>
+              <select id="q-service" name="service" required>
+                <option value="" selected disabled>Choose a service…</option>
+                <option>Lawn mowing &amp; maintenance</option>
+                <option>Landscape design &amp; installation</option>
+                <option>Mulch &amp; garden beds</option>
+                <option>Hedge &amp; shrub trimming</option>
+                <option>Spring / fall cleanup</option>
+                <option>Pressure washing</option>
+                <option>Something else / multiple</option>
+              </select>
+              <p class="field-error">Please pick a service.</p>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="q-message">Anything else we should know? <span>(optional)</span></label>
+              <textarea id="q-message" name="message" placeholder="Yard size, gate access, how often you'd like service…"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Request My Free Quote</button>
+          <p class="form-note">No spam, no obligation. We only use your info to prepare your quote.</p>
+
+          <div class="form-success" role="status" aria-live="polite">
+            <svg class="icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>
+            <h3>Request received!</h3>
+            <p>Thanks — we'll get back to you within one business day with your free quote. Talk soon.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Good to know</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How much does lawn care cost in Cedar Rapids?</summary>
+            <div class="faq-body"><p>Every yard is different, so we quote each property individually — most quotes go out within one business day. Pricing depends on lot size, terrain, and how often you'd like service. Quotes are always free and there's no obligation.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What areas do you serve?</summary>
+            <div class="faq-body"><p>We currently serve homes and small businesses inside Cedar Rapids, Iowa city limits — from Czech Village and NewBo to Bowman Woods and Noelridge. We're not yet serving Marion or Hiawatha, but that's coming as we grow.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I have to sign a contract?</summary>
+            <div class="faq-body"><p>No. You can book one-time work like a cleanup or mulch install, or set up recurring mowing that you can pause or cancel anytime. We'd rather earn your repeat business than lock it in.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Are you licensed and insured?</summary>
+            <div class="faq-body"><p>Yes — Light Work Exterior Services is fully insured, and the owner is on-site for every job. If we ever damage something, we make it right.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get a quote?</summary>
+            <div class="faq-body"><p>Fill out the <a href="#quote">quote form</a> on this page, or call us at <a href="tel:+13195550148">(319) 555-0148</a>. Tell us your address and what you need done — we'll usually respond within one business day, and we can do a free walkthrough for bigger landscaping projects.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ Final CTA band ═══════════ -->
+    <section class="band" style="--band-img:url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=60&auto=format&fit=crop')" aria-label="Get started">
+      <div>
+        <h2>Your weekends are for you. The yard is for us.</h2>
+        <p>Join our first-season route in Cedar Rapids and lock in a spot before the schedule fills up.</p>
+        <a class="btn btn-primary" href="#quote">Get My Free Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ Footer ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Back to top">
+            <svg class="brand-mark" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="15" cy="12" r="6" fill="var(--color-accent)"/>
+              <path d="M8 30 L24 15 L40 30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 37 Q24 30.5 41 37" stroke="var(--color-green-bright)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-name">Light Work<small>Exterior Services</small></span>
+          </a>
+          <p>Locally owned lawn care and landscaping, serving Cedar Rapids, Iowa.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h3>Services</h3>
+          <ul role="list">
+            <li><a href="#services">Lawn Mowing</a></li>
+            <li><a href="#services">Landscaping</a></li>
+            <li><a href="#services">Mulch &amp; Beds</a></li>
+            <li><a href="#services">Cleanups</a></li>
+            <li><a href="#services">Pressure Washing</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>Contact</h3>
+          <ul role="list">
+            <li><a href="tel:+13195550148">(319) 555-0148</a></li>
+            <li><a href="mailto:quotes@lightworkexteriors.com">quotes@lightworkexteriors.com</a></li>
+            <li><a href="#quote">Request a quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <ul role="list">
+            <li>Mon–Sat: 7am – 6pm</li>
+            <li>Sunday: Closed</li>
+            <li>Cedar Rapids, IA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Light Work Exterior Services · Cedar Rapids, Iowa</p>
+        <p>Fully insured · Free quotes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
