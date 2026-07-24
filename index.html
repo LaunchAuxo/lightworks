@@ -49,7 +49,7 @@
     "@type": "LocalBusiness",
     "@id": "https://www.lightworkexteriors.com/#business",
     "name": "Light Work Exterior Services",
-    "description": "Locally owned lawn care and landscaping company serving Cedar Rapids, Iowa. Lawn mowing, landscape design and installation, mulch and garden beds, hedge trimming, seasonal cleanups, and pressure washing.",
+    "description": "Locally owned lawn care and landscaping company based in Cedar Rapids, Iowa, serving Cedar Rapids and surrounding towns including Marion, Hiawatha, Robins, Fairfax, Ely, Swisher, and Shueyville. Lawn mowing, landscape design and installation, mulch and garden beds, hedge trimming, seasonal cleanups, and pressure washing.",
     "url": "https://www.lightworkexteriors.com/",
     "telephone": "+1-319-423-9063",
     "email": "Kijenkins@lightworkexteriorservicesll.onmicrosoft.com",
@@ -63,11 +63,16 @@
       "addressCountry": "US"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 41.9779, "longitude": -91.6656 },
-    "areaServed": {
-      "@type": "City",
-      "name": "Cedar Rapids",
-      "sameAs": "https://en.wikipedia.org/wiki/Cedar_Rapids,_Iowa"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Cedar Rapids", "sameAs": "https://en.wikipedia.org/wiki/Cedar_Rapids,_Iowa" },
+      { "@type": "City", "name": "Marion, Iowa" },
+      { "@type": "City", "name": "Hiawatha, Iowa" },
+      { "@type": "City", "name": "Robins, Iowa" },
+      { "@type": "City", "name": "Fairfax, Iowa" },
+      { "@type": "City", "name": "Ely, Iowa" },
+      { "@type": "City", "name": "Swisher, Iowa" },
+      { "@type": "City", "name": "Shueyville, Iowa" }
+    ],
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
@@ -103,7 +108,7 @@
       {
         "@type": "Question",
         "name": "What areas do you serve?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We currently serve homes and small businesses inside Cedar Rapids, Iowa city limits — from Czech Village and NewBo to Bowman Woods and Noelridge. We're not yet serving Marion or Hiawatha, but that's coming as we grow." }
+        "acceptedAnswer": { "@type": "Answer", "text": "We serve Cedar Rapids and the surrounding towns — as far north as Robins, south to Swisher and Shueyville, west to Fairfax, and east to Marion. That includes Hiawatha, Ely, and everywhere in between. If you're unsure whether your address is in range, send a quote request and we'll let you know." }
       },
       {
         "@type": "Question",
@@ -303,12 +308,12 @@
       <div class="container area-inner">
         <div>
           <p class="eyebrow">Where we work</p>
-          <h2 class="section-head" style="margin-bottom:0">Proudly serving Cedar Rapids, Iowa</h2>
-          <p style="margin-top:var(--space-4); color:var(--color-text-muted)">We keep our route tight so we can show up on time, every time. If your home or business is inside Cedar Rapids city limits, you're in our service area.</p>
-          <p class="area-note"><strong>Not in Cedar Rapids?</strong> We're not booking Marion or Hiawatha yet — but we're growing. Send a quote request anyway and we'll let you know the moment we reach your street.</p>
+          <h2 class="section-head" style="margin-bottom:0">Proudly serving Cedar Rapids &amp; the surrounding area</h2>
+          <p style="margin-top:var(--space-4); color:var(--color-text-muted)">Our route covers Cedar Rapids and the towns around it — as far north as Robins, south to Swisher and Shueyville, west to Fairfax, and east to Marion. If you're inside that area, you're in our service area.</p>
+          <p class="area-note"><strong>Right on the edge?</strong> Send a quote request with your address anyway — we're still building our route and can often make it work, especially for weekly service.</p>
         </div>
         <div>
-          <h3 class="sr-only">Cedar Rapids neighborhoods we serve</h3>
+          <h3 class="hoods-label">Cedar Rapids neighborhoods</h3>
           <ul class="hoods" role="list">
             <li>Czech Village</li>
             <li>NewBo</li>
@@ -324,6 +329,16 @@
             <li>Ellis Park area</li>
             <li>Downtown Cedar Rapids</li>
             <li>Northwest Cedar Rapids</li>
+          </ul>
+          <h3 class="hoods-label">Surrounding towns</h3>
+          <ul class="hoods" role="list">
+            <li class="hoods--town">Marion</li>
+            <li class="hoods--town">Hiawatha</li>
+            <li class="hoods--town">Robins</li>
+            <li class="hoods--town">Fairfax</li>
+            <li class="hoods--town">Ely</li>
+            <li class="hoods--town">Swisher</li>
+            <li class="hoods--town">Shueyville</li>
           </ul>
         </div>
       </div>
@@ -420,7 +435,7 @@
           </details>
           <details class="faq-item">
             <summary>What areas do you serve?</summary>
-            <div class="faq-body"><p>We currently serve homes and small businesses inside Cedar Rapids, Iowa city limits — from Czech Village and NewBo to Bowman Woods and Noelridge. We're not yet serving Marion or Hiawatha, but that's coming as we grow.</p></div>
+            <div class="faq-body"><p>We serve Cedar Rapids and the surrounding towns — as far north as Robins, south to Swisher and Shueyville, west to Fairfax, and east to Marion. That includes Hiawatha, Ely, and everywhere in between. If you're unsure whether your address is in range, send a quote request and we'll let you know.</p></div>
           </details>
           <details class="faq-item">
             <summary>Do I have to sign a contract?</summary>
