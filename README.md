@@ -14,28 +14,19 @@ _headers        — Cloudflare Pages cache/security headers
 robots.txt / sitemap.xml — SEO
 ```
 
-## Local preview
+## Live site
 
-```
-python -m http.server 3111
-# → http://localhost:3111/
-```
-
-## Deploy to Cloudflare Pages
-
-1. Push this repo to GitHub.
-2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git** → pick the repo.
-3. Settings: Framework preset **None**, build command **(leave empty)**, build output directory **/**.
-4. Deploy. Add the custom domain under **Custom domains** once purchased.
+Deployed as a git-connected Cloudflare Worker, auto-deploys on push to `main`:
+https://lightwork.launchauxo.workers.dev/
 
 ## Before real launch — replace placeholders
 
 All marked with a comment at the top of `index.html`:
 
-- [ ] **Phone** `(319) 555-0148` — in header, hero, quote section, FAQ, footer, and LocalBusiness JSON-LD
-- [ ] **Email** `quotes@lightworkexteriors.com` — quote section, footer, JSON-LD, form action
+- [x] **Phone** `(319) 423-9063` — in header, hero, quote section, FAQ, footer, and LocalBusiness JSON-LD
+- [x] **Email** `Kijenkins@lightworkexteriorservicesll.onmicrosoft.com` — quote section, footer, JSON-LD, form action
 - [ ] **Domain** `lightworkexteriors.com` — canonical, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`
-- [ ] **Quote form** — currently demo mode (shows success, sends nothing). Sign up at [formspree.io](https://formspree.io) or [formsubmit.co](https://formsubmit.co) with the business email, set the endpoint in the form `action`, then delete the `data-demo` attribute. See the comment above the `<form>` in `index.html`.
+- [ ] **Quote form** — currently demo mode (shows success, sends nothing). The form `action` now points at FormSubmit with the real email above — FormSubmit will email a one-time confirmation link to that inbox on the *first* real submission; click it to activate, then delete the `data-demo` attribute in `index.html` to let submits actually send instead of showing the local demo success message.
 - [ ] **Verify claims** — "fully insured" / "owner on every job" appear on the page and in FAQ schema; confirm they're accurate.
 - [ ] **Photos** — Unsplash stock for now; swap in real job photos when available.
 
