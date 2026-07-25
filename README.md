@@ -1,6 +1,6 @@
 # Light Work Exterior Services — Website
 
-Single-page marketing site for Light Work Exterior Services, a landscaping company in Cedar Rapids, Iowa. Pure static HTML/CSS/JS — no build step, no dependencies.
+Single-page marketing site for Light Work Exterior Services (power washing, gutter cleaning, A/C condenser cleaning, lawn care, landscape design, yard cleanups) in Cedar Rapids, Iowa. Pure static HTML/CSS/JS — no build step, no dependencies.
 
 ## Structure
 

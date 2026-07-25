@@ -83,6 +83,8 @@
   if (form) {
     var fields = form.querySelectorAll('input[required], select[required]');
     var emailField = form.querySelector('#q-email');
+    var serviceField = document.getElementById('service-field');
+    var serviceInputs = form.querySelectorAll('input[name="service"]');
 
     function validateField(el) {
       var wrap = el.closest('.form-field');
@@ -94,16 +96,26 @@
       return !bad;
     }
 
+    function validateServices() {
+      var anyChecked = form.querySelectorAll('input[name="service"]:checked').length > 0;
+      serviceField.classList.toggle('has-error', !anyChecked);
+      return anyChecked;
+    }
+
     fields.forEach(function (el) {
       el.addEventListener('blur', function () { validateField(el); });
       el.addEventListener('input', function () { el.closest('.form-field').classList.remove('has-error'); });
     });
     if (emailField) emailField.addEventListener('blur', function () { validateField(emailField); });
+    serviceInputs.forEach(function (el) {
+      el.addEventListener('change', function () { if (serviceField.classList.contains('has-error')) validateServices(); });
+    });
 
     form.addEventListener('submit', function (e) {
       var ok = true;
       fields.forEach(function (el) { if (!validateField(el)) ok = false; });
       if (emailField && !validateField(emailField)) ok = false;
+      if (!validateServices()) ok = false;
 
       if (!ok) {
         e.preventDefault();

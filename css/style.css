@@ -582,6 +582,46 @@ a, button, [role="button"], input, textarea, select, summary {
 }
 .form-field.has-error input, .form-field.has-error select, .form-field.has-error textarea { border-color: var(--color-error); }
 .form-field.has-error .field-error { display: block; }
+
+.service-fieldset { border: none; padding: 0; }
+.service-fieldset legend {
+  padding: 0; margin-bottom: var(--space-3);
+  font-size: var(--text-sm); font-weight: 700;
+}
+.service-fieldset legend span { color: var(--color-text-faint); font-weight: 500; }
+.service-options { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.service-option { position: relative; display: inline-flex; min-height: 44px; }
+.service-option input {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  margin: 0; opacity: 0; cursor: pointer;
+}
+.service-option span {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm); font-weight: 500;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.2);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-4);
+}
+.service-option span svg {
+  width: 14px; height: 14px; flex-shrink: 0;
+  opacity: 0; margin-left: -1.25em; transition: opacity var(--transition-interactive), margin var(--transition-interactive);
+}
+.service-option input:checked + span {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-text-inverse);
+}
+.service-option input:checked + span svg { opacity: 1; margin-left: 0; }
+.service-option input:focus-visible + span {
+  outline: 2px solid var(--color-accent); outline-offset: 2px;
+}
+.service-option:hover span { border-color: var(--color-navy); }
+.form-field.has-error .service-options {
+  outline: 2px solid var(--color-error); outline-offset: var(--space-3);
+  border-radius: var(--radius-lg);
+}
 .quote-form .btn { width: 100%; margin-top: var(--space-6); font-size: var(--text-base); }
 .form-note {
   margin-top: var(--space-4); text-align: center;
@@ -603,11 +643,24 @@ a, button, [role="button"], input, textarea, select, summary {
 }
 
 /* ---------- FAQ ---------- */
-.faq-list { max-width: var(--content-narrow); display: grid; gap: var(--space-3); }
+.faq { background: var(--color-surface); border-block: 1px solid var(--color-divider); }
+.faq-inner {
+  display: grid; grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(var(--space-8), 6vw, var(--space-16));
+  align-items: start;
+}
+.faq-inner > div:first-child a { color: var(--color-navy); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.faq-list { display: grid; gap: var(--space-4); }
 .faq-item {
-  background: var(--color-surface);
+  background: var(--color-surface-2);
   border: 1px solid oklch(from var(--color-text) l c h / 0.09);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive);
+}
+.faq-item:hover, .faq-item[open] {
+  box-shadow: var(--shadow-md);
+  border-color: oklch(from var(--color-navy) l c h / 0.3);
 }
 .faq-item summary {
   list-style: none;
@@ -631,6 +684,7 @@ a, button, [role="button"], input, textarea, select, summary {
   padding: 0 var(--space-6) var(--space-5);
   color: var(--color-text-muted); font-size: var(--text-sm);
 }
+@media (max-width: 880px) { .faq-inner { grid-template-columns: 1fr; } }
 
 /* ---------- Full-bleed band ---------- */
 .band {
