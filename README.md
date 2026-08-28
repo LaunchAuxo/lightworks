@@ -26,7 +26,7 @@ All marked with a comment at the top of `index.html`:
 - [x] **Phone** `(319) 423-9063` — in header, hero, quote section, FAQ, footer, and LocalBusiness JSON-LD
 - [x] **Email** `Kijenkins@lightworkexteriorservicesll.onmicrosoft.com` — quote section, footer, JSON-LD, form action
 - [ ] **Domain** `lightworkexteriors.com` — canonical, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`
-- [ ] **Quote form** — currently demo mode (shows success, sends nothing). The form `action` now points at FormSubmit with the real email above — FormSubmit will email a one-time confirmation link to that inbox on the *first* real submission; click it to activate, then delete the `data-demo` attribute in `index.html` to let submits actually send instead of showing the local demo success message.
+- [ ] **Quote form** — wired to FormSubmit (`js/main.js` posts via fetch to FormSubmit's AJAX endpoint, action = FormSubmit with the real email above). FormSubmit emails a one-time confirmation link to that inbox on the *first* real submission — **Ki needs to click it**, or every submission before that is silently dropped.
 - [ ] **Verify claims** — "fully insured" / "owner on every job" appear on the page and in FAQ schema; confirm they're accurate.
 - [ ] **Photos** — Unsplash stock for now; swap in real job photos when available.
 

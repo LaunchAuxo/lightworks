@@ -111,29 +111,47 @@
       el.addEventListener('change', function () { if (serviceField.classList.contains('has-error')) validateServices(); });
     });
 
+    function showSuccess() {
+      Array.prototype.forEach.call(form.children, function (child) {
+        if (!child.classList.contains('form-success')) child.style.display = 'none';
+      });
+      form.querySelector('.form-success').classList.add('is-visible');
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
       var ok = true;
       fields.forEach(function (el) { if (!validateField(el)) ok = false; });
       if (emailField && !validateField(emailField)) ok = false;
       if (!validateServices()) ok = false;
 
       if (!ok) {
-        e.preventDefault();
         var firstBad = form.querySelector('.has-error input, .has-error select');
         if (firstBad) firstBad.focus();
         return;
       }
 
-      // Demo mode: no form backend connected yet (see comment in index.html).
-      // Once a real endpoint is set in `action`, remove data-demo to enable real submits.
-      if (form.hasAttribute('data-demo')) {
-        e.preventDefault();
-        Array.prototype.forEach.call(form.children, function (child) {
-          if (!child.classList.contains('form-success')) child.style.display = 'none';
-        });
-        form.querySelector('.form-success').classList.add('is-visible');
-        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      var submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+
+      // FormSubmit's AJAX endpoint returns JSON and keeps the user on this page.
+      var ajaxAction = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+      fetch(ajaxAction, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (!res.ok) throw new Error('FormSubmit request failed');
+        showSuccess();
+      }).catch(function () {
+        // Fall back to a normal POST (FormSubmit will redirect to its own thank-you page).
+        form.submit();
+      }).finally(function () {
+        submitBtn.disabled = false;
+      });
     });
   }
 
