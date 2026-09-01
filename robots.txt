@@ -1,6 +1,5 @@
 # Light Work Exterior Services — Cedar Rapids, IA
-# Replace lightworkexteriors.com with the real domain before launch.
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lightworkexteriors.com/sitemap.xml
+Sitemap: https://lightworkexterior.com/sitemap.xml

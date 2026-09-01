@@ -25,7 +25,7 @@ All marked with a comment at the top of `index.html`:
 
 - [x] **Phone** `(319) 423-9063` — in header, hero, quote section, FAQ, footer, and LocalBusiness JSON-LD
 - [x] **Email** `Kijenkins@lightworkexteriorservicesll.onmicrosoft.com` — quote section, footer, JSON-LD, form action
-- [ ] **Domain** `lightworkexteriors.com` — canonical, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`
+- [x] **Domain** `lightworkexterior.com` — canonical, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`. DNS/Worker custom domain configured on the apex in Cloudflare (2026-08-31); add `www` as a second custom domain too if you want that variant to resolve.
 - [ ] **Quote form** — wired to FormSubmit (`js/main.js` posts via fetch to FormSubmit's AJAX endpoint, action = FormSubmit with the real email above). FormSubmit emails a one-time confirmation link to that inbox on the *first* real submission — **Ki needs to click it**, or every submission before that is silently dropped.
 - [ ] **Verify claims** — "fully insured" / "owner on every job" appear on the page and in FAQ schema; confirm they're accurate.
 - [ ] **Photos** — Unsplash stock for now; swap in real job photos when available.
