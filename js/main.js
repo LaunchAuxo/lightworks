@@ -155,6 +155,56 @@
     });
   }
 
+  /* ---------- Why-us photo gallery ---------- */
+  var galleryTrack = document.getElementById('why-gallery-track');
+  if (galleryTrack) {
+    var galleryItems = Array.prototype.slice.call(galleryTrack.querySelectorAll('.why-gallery-item'));
+
+    document.querySelectorAll('.why-gallery-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var dir = Number(btn.getAttribute('data-dir'));
+        galleryTrack.scrollBy({ left: dir * galleryTrack.clientWidth * 0.85, behavior: 'smooth' });
+      });
+    });
+
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxIndex = 0;
+
+    function openLightbox(index) {
+      lightboxIndex = index;
+      var img = galleryItems[lightboxIndex].querySelector('img');
+      lightboxImg.src = img.src.replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80');
+      lightboxImg.alt = img.alt;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+    function showDelta(delta) {
+      openLightbox((lightboxIndex + delta + galleryItems.length) % galleryItems.length);
+    }
+
+    galleryItems.forEach(function (item, index) {
+      item.addEventListener('click', function () { openLightbox(index); });
+    });
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', function () { showDelta(-1); });
+    lightbox.querySelector('.lightbox-next').addEventListener('click', function () { showDelta(1); });
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showDelta(-1);
+      if (e.key === 'ArrowRight') showDelta(1);
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
